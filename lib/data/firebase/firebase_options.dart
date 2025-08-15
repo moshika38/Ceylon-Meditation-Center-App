@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAcP0CZAvijM2_pCgFXlj4TcC-2lUqdPc0',
-    appId: '1:579422402138:android:9004dbab720b02c1a1ca63',
+    appId: '1:579422402138:android:4f55bd9cde4d3293a1ca63',
     messagingSenderId: '579422402138',
     projectId: 'meditation-center-app-a7d56',
     storageBucket: 'meditation-center-app-a7d56.firebasestorage.app',
@@ -59,11 +59,12 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBUkOtXZGFMGD2wbPFDldnuj6jaOG1xs4g',
-    appId: '1:579422402138:ios:d0f3035fdbe8ca51a1ca63',
+    appId: '1:579422402138:ios:8afb316cceab5498a1ca63',
     messagingSenderId: '579422402138',
     projectId: 'meditation-center-app-a7d56',
     storageBucket: 'meditation-center-app-a7d56.firebasestorage.app',
-    iosClientId: '579422402138-6lqu947q2s0fjgl1borh659anai4dn42.apps.googleusercontent.com',
-    iosBundleId: 'com.example.meditationCenter',
+    androidClientId: '579422402138-bs00nlrs1koq53ifg4j9of4vrivunqm5.apps.googleusercontent.com',
+    iosClientId: '579422402138-9219048cjs3vpm7s2kem5eseau29qgad.apps.googleusercontent.com',
+    iosBundleId: 'com.example.cmcApp',
   );
 }

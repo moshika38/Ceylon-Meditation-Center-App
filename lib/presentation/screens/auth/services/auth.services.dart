@@ -94,6 +94,8 @@ class AuthServices {
       );
     }
 
+    //TODO : if user concel the account
+
     final GoogleSignInAuthentication googleAuth =
         await googleUser.authentication;
 
