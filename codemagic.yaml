@@ -7,34 +7,14 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
-      vars:
-        FIREBASE_PLIST_BASE64: $FIREBASE_PLIST_BASE64  # Set this in Codemagic UI
     scripts:
-      - name: Set up Firebase
-        script: |
-          # Decode and place the Firebase config file
-          echo $FIREBASE_PLIST_BASE64 | base64 --decode > ios/Runner/GoogleService-Info.plist
-          
-          # Verify the file was created
-          ls -la ios/Runner/GoogleService-Info.plist
-          plutil -lint ios/Runner/GoogleService-Info.plist
-
       - name: Get Flutter packages
         script: |
           flutter pub get
-
-      - name: Install pods
-        script: |
-          cd ios
-          pod install
-          cd ..
-
       - name: Build for iOS Simulator
         script: |
           flutter build ios --debug \
             --no-codesign \
-            --simulator \
-            -v  # Verbose logging for troubleshooting
-
+            --simulator
     artifacts:
       - build/ios/iphonesimulator/*.app
